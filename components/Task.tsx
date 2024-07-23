@@ -1,12 +1,12 @@
 import { H4, XStack, Checkbox, Spacer, H5, H6, Button, H2 } from 'tamagui';
-import { Check } from '@tamagui/lucide-icons';
+import { Check, Minus } from '@tamagui/lucide-icons';
 
 type checkProps = {
-    value: string;
+    taskName: string;
     onRemove: () => void;
 }
 
-export const Task = ({value,onRemove}: checkProps) => {
+export const Task = ({taskName ,onRemove}: checkProps) => {
   return (
     <XStack ai="center" bg="$blue2" borderRadius="$5" h="$5" mb="$1.5" >
       <Checkbox size="$7" m="$2">
@@ -15,10 +15,10 @@ export const Task = ({value,onRemove}: checkProps) => {
         </Checkbox.Indicator>
       </Checkbox>
       <Spacer />
-      <H6 color="white" fontWeight="bold" >{value}</H6>
+      <H6 color="white"  >{taskName}</H6>
       <Spacer f={1}  />
       <Button  bg="$red8" mr="$1" height="$5" onPress={onRemove}>
-            <H2>-</H2>
+            <Minus />
       </Button>
     </XStack>
   );

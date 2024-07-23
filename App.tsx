@@ -1,6 +1,5 @@
 import { ScreenContent } from 'components/ScreenContent';
 import { StatusBar } from 'expo-status-bar';
-import { Text } from 'react-native';
 import { TamaguiProvider } from 'tamagui';
 
 import config from './tamagui.config';
@@ -19,7 +18,7 @@ export default function App() {
   return (
     <TamaguiProvider config={config}>
       <Home />
-      <StatusBar style="auto" />
+      <StatusBar style="light"  />
     </TamaguiProvider>
   );
 }
